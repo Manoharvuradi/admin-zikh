@@ -4,12 +4,12 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { appRouter } from "~/server/api/root";
 import { createTRPCContext } from "~/server/api/trpc";
 
-const SeachByStateHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+const CrimeTip = async (req: NextApiRequest, res: NextApiResponse) => {
     const ctx = await createTRPCContext({ req, res });
     const caller = appRouter.createCaller(ctx);
     if (req.method === "POST") {
         try {
-            const seachByState = await caller.searchByCity.create(req.body);
+            const seachByState = await caller.searchByState.create(req.body);
             res.status(200).json({ status: true, data: seachByState });
         } catch (cause) {
             if (cause instanceof TRPCError) {
@@ -29,4 +29,4 @@ const SeachByStateHandler = async (req: NextApiRequest, res: NextApiResponse) =>
     }
 }
 
-export default SeachByStateHandler;
+export default CrimeTip;

@@ -1,5 +1,6 @@
 import { createTRPCRouter } from "~/server/api/trpc";
 import { exampleRouter } from "~/server/api/routers/example";
+import { searchByCityRouter } from "./routers/searchByCity";
 import { searchByStateRouter } from "./routers/searchByState";
 
 /**
@@ -9,7 +10,8 @@ import { searchByStateRouter } from "./routers/searchByState";
  */
 export const appRouter = createTRPCRouter({
   example: exampleRouter,
-  searchByState: searchByStateRouter
+  searchByCity: searchByCityRouter,
+  searchByState: searchByStateRouter,
 });
 
 // export type definition of API
