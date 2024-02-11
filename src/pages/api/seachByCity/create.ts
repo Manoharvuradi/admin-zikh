@@ -4,7 +4,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { appRouter } from "~/server/api/root";
 import { createTRPCContext } from "~/server/api/trpc";
 
-const CrimeTip = async (req: NextApiRequest, res: NextApiResponse) => {
+const SeachByStateHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     const ctx = await createTRPCContext({ req, res });
     const caller = appRouter.createCaller(ctx);
     if (req.method === "POST") {
@@ -29,4 +29,4 @@ const CrimeTip = async (req: NextApiRequest, res: NextApiResponse) => {
     }
 }
 
-export default CrimeTip;
+export default SeachByStateHandler;
