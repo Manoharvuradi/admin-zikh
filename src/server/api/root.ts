@@ -1,5 +1,4 @@
 import { createTRPCRouter } from "~/server/api/trpc";
-import { exampleRouter } from "~/server/api/routers/example";
 import { searchByCityRouter } from "./routers/searchByCity";
 import { searchByStateRouter } from "./routers/searchByState";
 
@@ -9,7 +8,6 @@ import { searchByStateRouter } from "./routers/searchByState";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
-  example: exampleRouter,
   searchByCity: searchByCityRouter,
   searchByState: searchByStateRouter,
 });
