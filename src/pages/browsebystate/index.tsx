@@ -20,4 +20,4 @@ const SearchByCity = () => {
   )
 }
 
-export default SearchByCity
+export default SearchByCity;

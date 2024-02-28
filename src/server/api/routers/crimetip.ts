@@ -12,6 +12,7 @@ export const crimeTipRouter = createTRPCRouter({
         }),
     create: publicProcedure
         .input(crimeTipSchema()).mutation(async ({ ctx, input }: any) => {
+            console.log("input", input);
             try {
                 const response = await ctx?.prisma.crimeTip.create({
                     data: {
