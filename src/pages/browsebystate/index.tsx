@@ -1,23 +1,28 @@
 import React from 'react'
-import Button from '~/common/buttons'
+import Button from '~/common/buttons';
+import InputField from '~/common/form/input';
+import { browseByState } from '~/utils/constants/browseByState';
 
-const SearchByCity = () => {
-    const handleCreateCity = () => {
-        
-    }
+const BrowseByState = () => {
+  const [selectedState, setSelectedState] = React.useState(browseByState);
+  const handleState = () => {
+    setSelectedState(browseByState);
+  }
   return (
     <div>
-        
-          <Button
-              text="Add city"
-              onClick={()=>{
-                handleCreateCity()
-              }}
-              className="mr-3"
-              disabled={false}
-          />
+      <InputField 
+        input={browseByState}
+        formValues={selectedState}
+        handleChange={handleState}
+      />
+      <Button
+        text="Add State"
+        onClick={() => {}}
+        className="mr-3"
+        disabled={false}
+      />
     </div>
   )
 }
 
-export default SearchByCity;
+export default BrowseByState;
