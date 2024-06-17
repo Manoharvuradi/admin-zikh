@@ -1,7 +1,7 @@
-export const browseByState = 
+export const browseByState = [
    {
     label: "Add state",
-    type: "text",
+    type: "select",
     name: "addState",
     required: true,
     options:[
@@ -31,3 +31,4 @@ export const browseByState =
         }
     ]
    }
+]
