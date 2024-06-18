@@ -2,9 +2,13 @@ export const browseByState = [
    {
     label: "Add state",
     type: "select",
-    name: "addState",
+    name: "stateName",
     required: true,
     options:[
+        {
+            label: "select",
+            value: ""
+        },
         {
             label:"Andra Pradesh",
             value:"andraPradesh"
@@ -28,7 +32,23 @@ export const browseByState = [
         {
             label:"Goa",
             value:"goa"
+        },
+        {
+            label: "Telangana",
+            value: "telangana"
         }
     ]
+   },
+   {
+    label:"Lattitude",
+    type:"text",
+    name:"latitude",
+    required:true
+   },
+   {
+    label:"Longitude",
+    type:"text",
+    name:"longitude",
+    required:true
    }
 ]
