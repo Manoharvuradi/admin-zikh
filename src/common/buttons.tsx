@@ -14,7 +14,7 @@ export default function Button(props: ButtonProps) {
     const { text, onClick, type, disabled, className } = props;
     return (
         <button
-            className={`flex h-8 items-center justify-center gap-2 rounded-md bg-primary-blue px-2.5 text-sm text-black border-black bg-slate-500 transition duration-300 hover:bg-hover-blue ${className || ""
+            className={`flex h-8 items-center justify-center gap-2 rounded-md bg-primary-blue px-2.5 text-sm text-white border-white bg-primary-600 transition duration-300 hover:bg-hover-blue ${className || ""
                 } ${disabled ? "cursor-not-allowed opacity-50" : ""}`}
             disabled={disabled}
             type={type ? type : "button"}

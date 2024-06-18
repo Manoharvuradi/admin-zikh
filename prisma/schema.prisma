@@ -56,8 +56,8 @@ model CrimeTip {
   city          String
   state         String
   zip           String
-  latitude      Decimal
-  longitude     Decimal
+  latitude      String
+  longitude     String
   tip           String
   personalInfo  String
   addtionalInfo String

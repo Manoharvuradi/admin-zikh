@@ -6,13 +6,14 @@ export const searchByStateRouter = createTRPCRouter({
         .query(async ({ ctx }) => {
             return await ctx.prisma.searchByState.findMany();
         }),
+
+        //this api will add state
     create: publicProcedure
         .input(z.object({
             stateName: z.string(),
-            latitude: z.number(),
-            longitude: z.number(),
+            latitude: z.string(),
+            longitude: z.string(),
         })).mutation(async ({ ctx, input }) => {
-            console.log("input", input);
             try {
                 const response = await ctx.prisma.searchByState.create({
                     data: {
