@@ -1,0 +1,7 @@
+-- AlterTable
+ALTER TABLE "SeachByCity" ALTER COLUMN "latitude" SET DATA TYPE TEXT,
+ALTER COLUMN "longitude" SET DATA TYPE TEXT;
+
+-- AlterTable
+ALTER TABLE "SearchByState" ALTER COLUMN "latitude" SET DATA TYPE TEXT,
+ALTER COLUMN "longitude" SET DATA TYPE TEXT;
